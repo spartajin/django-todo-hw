@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>{{ todo.content }}</h1>
+        <p>{{ todo.create_at }}</p>
+        <p>{{ todo.update_at }}</p>
+        <form action="/todo/delete/{{todo.id}}/" method="post">
+            {% csrf_token %}
+            <button>
+                delete
+            </button>
+        </form>
+
+        <a href="/todo/update/{{todo.id}}/">
+            <button>update</button>
+        </a>
+        <a href="/todo/">
+            <button>go back</button>
+        </a>
+    </div>
+    
+</body>
+</html>

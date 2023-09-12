@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    todo index
+    <a href="/todo/create/">
+        <button>create</button>
+    </a>
+    <ul>
+        {% for todo in todos %}
+        <a href="/todo/{{todo.id}}">
+            <li>
+                {{ todo.content}}
+            </li>
+        </a>
+        {% endfor %}
+
+    </ul>
+    
+</body>
+</html>
